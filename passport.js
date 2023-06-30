@@ -48,7 +48,7 @@ the server and its purpose is to retrieve the user object from the session and m
 the request object. In this case, the `deserializeUser` method is simply passing the entire user
 object to the `done` callback function, which signals that the deserialization process is complete. */
 passport.deserializeUser((user, done) => {
-    done(null, user.id);
+    done(null, user);
 });
 
 // module.expeorts = email;
