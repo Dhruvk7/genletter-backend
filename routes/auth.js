@@ -6,6 +6,11 @@ require('dotenv').config();
 router.get("/login/success", async (req, res) => {
     // const email = await passportEmail.getUserProfile();
     // console.log(email);
+    passport.authenticate("google", {
+        successRedirect: process.env.CLIENT_URL,
+        failureRedirect: "/login/failed",
+    })
+    
     if (req.user) {
         res.status(200).json({
             error: false,
