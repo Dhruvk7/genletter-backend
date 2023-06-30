@@ -27,7 +27,7 @@ app.use(passport.session());
 
 
 app.use(cors({
-    origin: 'http://localhost:3000',
+    origin: ['http://localhost:3000', 'https://genletter77.netlify.app'],
     methods: 'GET,PUT,POST,DELETE',
     credentials: true
 }));
