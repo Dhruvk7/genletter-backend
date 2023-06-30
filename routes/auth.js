@@ -14,7 +14,7 @@ router.get("/login/success", async (req, res) => {
         });
         // console.log(req.user.emails[1]);
     } else {
-        res.status(403).json({ error: true, message: "Not Authorized" });
+        res.status(200).json({ error: true, message: "Not Authorized" });
     }
 });
 
