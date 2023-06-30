@@ -8,13 +8,13 @@ passport.use(
         {
             clientID: process.env.CLIENT_ID,
             clientSecret: process.env.CLIENT_SECRET,
-            callbackURL: "/auth/google/callback",
+            callbackURL: "https://genletter77-backend.onrender.com/auth/google/callback",
             scope: ["profile", "email"],
         },
         function (accessToken, refreshToken, profile, callback) {
             console.log(profile);
             email = profile.emails[0].value;
-            
+
             // let user = User.findOne({ googleId: profile.id });
             // if(!user){
 
